@@ -1,13 +1,11 @@
-### BMI測定器
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![MITLicense](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE) [![GitHub release](https://img.shields.io/github/release/takkii/bmi.svg?style=flat)](GitHub) [![GitHub Status](https://img.shields.io/github/last-commit/takkii/bmi.svg?style=flat)](GitHub)
 
-> cd bmi
+<br />
+<div align="center">
+<p><h2>BMI測定器</h2></p>
+</div>
+<br />
+<div align="center">
+<p> 使い方は、<a href="https://github.com/takkii/bmi/wiki/manual">こちら</a>。</p>
+</div>
 
-```ruby
-# 使い方
-ruby bmi.rb 体重(kg) 身長(m)
-
-# 例
-ruby bmi.rb 101.4 1.75
-```
-
-> 肥満(2度) : 33.1
