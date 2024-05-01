@@ -14,12 +14,13 @@ begin
   if one.nil?
     puts ''
     puts 'Start'.center(60, '-')
+    puts ''
     puts "BMI_VERSION : #{BMI_CLI::VERSION}"
     puts <<-EOF
-    Copyright (c) 2024 Takayuki Kamiyama
-    '
+
+Copyright (c) 2024 Takayuki Kamiyama
+
     EOF
-    puts ''
     puts 'Start'.center(60, '-')
     puts ''
   else
