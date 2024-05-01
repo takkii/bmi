@@ -6,7 +6,8 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "version"
+require 'bmi'
+require 'version'
 
 begin
   one = ARGV[0]
@@ -24,7 +25,28 @@ Copyright (c) 2024 Takayuki Kamiyama
     puts 'STATUS'.center(60, '-')
     puts ''
   else
-    require 'bmi'
+    begin
+      encoding_style
+      fomula = calc(kg = ARGV[0], m = ARGV[1]).round(1)
+
+      if (fomula < 18.5)
+          puts '低体重' + " : #{fomula}"
+      elsif (fomula < 24.9)
+          puts '普通体重'+ " : #{fomula}"
+      elsif (fomula < 29.9)
+          puts '肥満(1度)'+ " : #{fomula}"
+      elsif (fomula < 34.9)
+          puts '肥満(2度)'+ " : #{fomula}"
+      elsif (fomula < 39.9)
+          puts '肥満(3度)'+ " : #{fomula}"
+      else
+          puts '肥満(4度)'+ " : #{fomula}"
+      end
+    rescue Exception => e
+      puts e.backtrace
+    ensure
+      GC.compact
+    end
   end
 rescue StandardError => e
   puts e.backtrace
