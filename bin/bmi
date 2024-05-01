@@ -13,7 +13,7 @@ begin
 
   if one.nil?
     puts ''
-    puts 'Start'.center(60, '-')
+    puts 'STATUS'.center(60, '-')
     puts ''
     puts "BMI_VERSION : #{BMI_CLI::VERSION}"
     puts <<-EOF
@@ -21,7 +21,7 @@ begin
 Copyright (c) 2024 Takayuki Kamiyama
 
     EOF
-    puts 'Start'.center(60, '-')
+    puts 'STATUS'.center(60, '-')
     puts ''
   else
     require 'bmi'
