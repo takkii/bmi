@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+require 'bmi'
+
+class MIT
+
+  def self.license
+    encoding_style
+    puts ''
+    puts ' LICENSE '.center(60, '-')
+    puts ''
+    File.open("./LICENSE.txt", 'r') do |f|
+      f.each_line do |line|
+        puts line
+      end
+    end
+    puts ''
+    puts ' LICENSE '.center(60, '-')
+    puts ''
+  end
+end
+
+begin
+  MIT.license
+rescue StandardError => e
+  puts e.backtrace
+ensure
+  GC.compact
+end
+
+__END__
