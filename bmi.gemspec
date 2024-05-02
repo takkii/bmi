@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "LICENSE.txt",
   ]
-  s.executables = %w(bmi)
+  s.executables = %w(bmi bmi-license)
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|mini_test)/}) }
   s.homepage = "https://github.com/takkii/bmi"
   s.licenses = ["MIT"]
