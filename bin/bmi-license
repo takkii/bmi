@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+begin
+    puts ''
+    puts 'STATUS'.center(60, '-')
+    puts ''
+    File.open("#{File.dirname(__FILE__)}/LICENSE.txt", 'r') do |f|
+      f.each_line do |line|
+        puts line
+      end
+    end
+    puts ''
+    puts 'STATUS'.center(60, '-')
+    puts ''
+rescue StandardError => e
+  puts e.backtrace
+ensure
+  GC.compact
+end
+
+__END__
