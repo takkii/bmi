@@ -7,7 +7,7 @@ begin
     puts ''
     puts 'STATUS'.center(60, '-')
     puts ''
-    File.open("./../LICENSE.txt", 'r') do |f|
+    File.open("./LICENSE.txt", 'r') do |f|
       f.each_line do |line|
         puts line
       end
