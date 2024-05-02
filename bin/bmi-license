@@ -3,7 +3,12 @@
 
 # vim: filetype=ruby
 
-begin
+require 'bmi'
+
+class MIT
+
+  def self.license
+    encoding_style
     puts ''
     puts ' LICENSE '.center(60, '-')
     puts ''
@@ -15,6 +20,11 @@ begin
     puts ''
     puts ' LICENSE '.center(60, '-')
     puts ''
+  end
+end
+
+begin
+  MIT.license
 rescue StandardError => e
   puts e.backtrace
 ensure
