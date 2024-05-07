@@ -69,7 +69,7 @@ begin
     puts ''
     puts 'This bmi project is MIT license.'
     puts ''
-    puts 'All Option, bmi -l | bmi license && bmi -r | bmi read.'
+    puts 'All Option, bmi-license -l | bmi-license license && bmi-license -r | bmi-license read.'
     puts ''
   elsif one.match?(l)
     MIT.doc
