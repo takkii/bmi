@@ -6,8 +6,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'bmi'
-require 'version'
+require "#{File.dirname(__FILE__)}/../require/bmi"
 
 begin
   one = ARGV[0]
@@ -19,7 +18,7 @@ begin
     puts "BMI_VERSION : #{BMI_CLI::VERSION}"
     puts <<-EOF
 
-Copyright (c) 2024 Takayuki Kamiyama
+Copyright (c) 2024 - #{(DateTime.now.year).to_s} Takayuki Kamiyama
 
     EOF
     puts 'STATUS'.center(60, '-')
@@ -30,17 +29,17 @@ Copyright (c) 2024 Takayuki Kamiyama
       fomula = calc(kg = ARGV[0], m = ARGV[1]).round(1)
 
       if (fomula < 18.5)
-          puts '低体重' + " : #{fomula}"
-      elsif (fomula < 24.9)
-          puts '普通体重'+ " : #{fomula}"
-      elsif (fomula < 29.9)
-          puts '肥満(1度)'+ " : #{fomula}"
-      elsif (fomula < 34.9)
-          puts '肥満(2度)'+ " : #{fomula}"
-      elsif (fomula < 39.9)
-          puts '肥満(3度)'+ " : #{fomula}"
+          puts 'UnderWeight' + " : #{fomula}"
+      elsif (fomula < 25.0)
+          puts 'Normal'+ " : #{fomula}"
+      elsif (fomula < 30)
+          puts 'OverWeight(Lv.1)'+ " : #{fomula}"
+      elsif (fomula < 35)
+          puts 'OverWeight(Lv.2)'+ " : #{fomula}"
+      elsif (fomula < 40)
+          puts 'OverWeight(Lv.3)'+ " : #{fomula}"
       else
-          puts '肥満(4度)'+ " : #{fomula}"
+          puts 'Obese'+ " : #{fomula}"
       end
     rescue Exception => e
       puts e.backtrace
