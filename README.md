@@ -1,6 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![MITLicense](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE) [![GitHub release](https://img.shields.io/github/release/takkii/bmi.svg?style=flat)](GitHub) [![GitHub Status](https://img.shields.io/github/last-commit/takkii/bmi.svg?style=flat)](GitHub) [![Ruby CI](https://github.com/takkii/bmi/actions/workflows/ruby.yml/badge.svg?branch=main)](https://github.com/takkii/bmi/actions/workflows/ruby.yml)
-
-<br />
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![MITLicense](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE) [![GitHub release](https://img.shields.io/github/release/takkii/bmi.svg?style=flat)](GitHub) [![GitHub Status](https://img.shields.io/github/last-commit/takkii/bmi.svg?style=flat)](GitHub)
 <div align="center">
 <p><h2>BMI測定器</h2></p>
 </div>
