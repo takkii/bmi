@@ -6,4 +6,6 @@ require 'minitest/autorun'
 require 'minitest/unit'
 require 'minitest/runner'
 require 'bmi'
+require 'date'
+require 'version'
 # --------------------------------------

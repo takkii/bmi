@@ -3,19 +3,13 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-# --------------------------------------
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/unit'
-require 'bmi'
-# --------------------------------------
+require "#{File.dirname(__FILE__)}/../require/dependent"
 
 # Mini_test file load.
 class VersionTest < Minitest::Test
 
   def encoding_style_utf8
-    Encoding.default_internal = Encoding::UTF_8
-    Encoding.default_external = Encoding::UTF_8
+    encoding_style
   end
 
   def bmi_calc(kg, m)
