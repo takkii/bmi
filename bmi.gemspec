@@ -3,7 +3,8 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "version"
+require 'version'
+require 'gem_version'
 
 Gem::Specification.new do |s|
   s.name = "bmi"
@@ -22,7 +23,7 @@ Gem::Specification.new do |s|
   s.metadata["yard.run"] = "yri"
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
-  s.required_rubygems_version = '~> 3.6.9'
+  s.required_rubygems_version = RbGemversion::VERSION
   s.summary = "This is a BMI measuring device."
   s.description = "Measure your BMI."
 
