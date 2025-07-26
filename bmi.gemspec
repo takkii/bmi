@@ -9,8 +9,7 @@ require 'gem_version'
 Gem::Specification.new do |s|
   s.name = "bmi"
   s.version = BMI_CLI::VERSION
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["takkii"]
+  s.authors = ["Takayuki Kamiyama"]
   s.email = "karuma.reason@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -23,7 +22,7 @@ Gem::Specification.new do |s|
   s.metadata["yard.run"] = "yri"
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
-  s.required_rubygems_version = RbGemversion::VERSION
+  s.required_rubygems_version = '~> 3.6.9' if s.respond_to? RbGemversion::VERSION
   s.summary = "This is a BMI measuring device."
   s.description = "Measure your BMI."
 
